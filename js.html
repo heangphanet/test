@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Testing</title>
+</head>
+<style>
+    .box-img{
+         width: 510px;
+         height: 200px;
+         /* background-color: aqua; */
+         margin-left:50px ;
+         border: 1px solid gray;
+    }
+    .box-img .box1{
+        width: 32%;
+        height: 97%;
+        float: left;
+        border: 1px solid gray;
+        margin-right:4px ;
+        margin-left: 4px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        background-color: gray;
+    }
+    .box-img .box1 img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition-delay: 0.5s;
+    }
+    .box-img .box2{
+        width: 32%;
+        height: 97%;
+        float: left;
+        border: 1px solid gray;
+        margin-right:4px ;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        background-color: gray;
+    }
+    .box-img .box2 img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition-delay: 0.5s;
+    }
+    .box-img .box3{
+        width: 32%;
+        height: 97%;
+        float: left;
+        border: 1px solid gray;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        background-color: gray;
+    }
+    .box-img .box3 img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition-delay: 0.3s;
+    }
+    .box-img .box3:hover img{
+        transform: rotate(30deg);
+    }
+    .box-img .box2:hover img{
+        transform: rotate(-45deg);
+    }
+    .box-img .box1:hover img{
+        transform: rotate(-30deg);
+    }
+    img{
+        width: 300px;
+        height: 400px;
+        object-fit: cover;
+    }
+</style>
+<script>
+    function showbox(){
+        document.getElementById("demo").setAttribute("src","img/pic.jpg");
+        // document.getElementById("demo").style="blue";
+    }
+    function showbox1(){
+        document.getElementById("demo").setAttribute("src","img/piccc.jpg");
+        // document.getElementById("demo").style="blue";
+    }
+    function showbox2(){
+        document.getElementById("demo").setAttribute("src","img/picc.jpg");
+        // document.getElementById("demo").style="blue";
+    }
+    function showbox3(){
+        document.getElementById("demo").setAttribute("src","img/pi.jpg");
+        // document.getElementById("demo").style="blue";
+    } 
+</script>
+<body>
+    <img src="img/pi.jpg" alt="" id="demo" onclick="showbox3()">
+    <div class="box-img">
+        <div class="box1">
+            <img src="img/pic.jpg" alt="" id="demo" onmouseover="showbox()">
+        </div>
+        <div class="box2">
+            <img src="img/piccc.jpg" alt="" id="demo" onmouseover="showbox1()">
+        </div>
+        <div class="box3">
+            <img src="img/picc.jpg" alt="" id="demo" onmouseover="showbox2()">
+        </div>  
+    </div>
+</body>
+</html>

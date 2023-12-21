@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/imags.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<script>
+    function num1(){
+       var txta=document.getElementById("txta").value;
+       var txtb=document.getElementById("txtb").value;
+       var txtc=document.getElementById("txtc").value=parseInt(txta)+parseInt(txtb);
+    }
+    function num2(){
+       var txta=document.getElementById("txta").value;
+       var txtb=document.getElementById("txtb").value;
+       var txtc=document.getElementById("txtc").value=parseInt(txta)-parseInt(txtb);
+    }
+    function num3(){
+       var txta=document.getElementById("txta").value;
+       var txtb=document.getElementById("txtb").value;
+       var txtc=document.getElementById("txtc").value=parseInt(txta)*parseInt(txtb);
+    }
+    function num4(){
+       var txta=document.getElementById("txta").value;
+       var txtb=document.getElementById("txtb").value;
+       var txtc=document.getElementById("txtc").value=parseInt(txta)/parseInt(txtb);
+    }
+</script>
+<body>
+    <input type="text" id="txta" value="0" >
+    <input type="text" id="txtb" value="0" >
+    <input type="text" id="txtc" value= "Answer"><br><br><br>
+    <button type="button" onclick="num1()">+</button>
+    <button type="button" onclick="num2()">-</button>
+    <button type="button" onclick="num3()">*</button>
+    <button type="button" onclick="num4()">/</button>
+</body>
+</html>
