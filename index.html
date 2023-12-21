@@ -1,22 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">
-<script>
-function myFunction() {
-//   document.getElementById("demo").innerHTML = "Paragraph changed.";
-  document.getElementById("demo").innerHTML ="hello guy";
-}
-function myFunctio(){
-  document.getElementById("demo").innerHTML ="hello";
-}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideDown(5000);
+  });
+  $("#flip").dblclick(function(){
+    $("#panel").slideUp(5000);
+  });
+  $("#stop").click(function(){
+    $("#panel").stop();
+  });
+});
 </script>
+<style> 
+#panel, #flip {
+  padding: 5px;
+  font-size: 20px;
+  text-align: center;
+  overflow: hidden;
+  background-color: #d4aaaa;
+  color: white;
+  border: solid 1px #c7a5a5;
+  border-radius: 3px;
+}
+
+#panel {
+  padding: 30px;
+  display: none;
+}
+.box{
+    margin-left: 150px;
+    margin-top: 50px;
+    width: 400px;
+    height: 600px;
+    float: left;
+}
+.box img{
+    margin-right: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+</style>
 </head>
 <body>
-<h2>Demo JavaScript in Head</h2>
-<p id="demo">A Paragraph.</p>
-<button type="button" onclick="myFunction()">Hover me</button>
-<!-- <p id="demo">change me</p> -->
-<button type="button" onclick="myFunctio()">click me</button>
+<button id="stop">Stop sliding</button>
+<button id="flip">Click to slide down and double click to slide up</button>
+<div id="panel">I Love U ❤️<br>
+    <div class="box">
+        <img src="img/hhe.jpg" alt="">
+    </div>
+    <div class="box">
+        <img src="img/Screenshots/hehe.png" alt="">
+    </div>
+</div>
 </body>
-</html> 
+</html>
